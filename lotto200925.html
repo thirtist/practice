@@ -25,6 +25,7 @@
     </style>
 </head>
 <body>
+    <div>로또-중복없이랜덤생성/오름차순정렬/숫자구간별로색출력/몇개맞는지확인하기</div><br>
     <div>당첨번호</div>
     <div id="n">
         <div id="a0"class="lo">1</div>
@@ -51,6 +52,8 @@
                 }
 
             }
+ arr.sort()
+            arr = arr.sort(function(a, b){return a-b});
 
             // console.log(arr);
             // 작동확인ok
@@ -72,7 +75,7 @@
                     colorA="green";
                 }
                 else if (arr[i]>9){
-                    colorA="yellow";
+                    colorA="grey";
                 }
                 else {
                     colorA="red";
