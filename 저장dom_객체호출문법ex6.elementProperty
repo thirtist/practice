@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+<head>
+<body>
+    <form action="" id="form1">
+        <input type="text" id="input1">
+    </form>
+    
+    <form action="" id="form2">
+        <input type="text" id="input2">
+    </form>
+    <script>
+        console.log(document.forms.form1);
+        console.log(document.forms["form1"]); //<form action="" id="form1"><input type="text" id="input1"></form>
+        //위에 두개는 같은문법
+        //forms라는 객체에서 "form1"이라는 프로퍼티이름(여기서는 id값)으로 value(여기서는 그 엘레먼트 전체)를 선택
+        //이미 forms {"첫번째form의 id값":그엘레먼트선택, "두번째form의..."} 이런식으로 존재함
+        //무슨무슨 element가 이미 속해있는지 알려면 dom 레퍼런스 참조
+
+        console.log(document.forms.form2.innerHTML);//<input type="text" id="input2">
+
+        var obj = {name: "john", age:50};
+        console.log(obj.name);
+        console.log(obj["name"]);
+        //같은문법
+        //obj라는 객체에서 "name"이라는 프로퍼티 이름으로 거기에 할당된 value를 선택
+        //객체에서 
+
+
+    </script>
+</body>
+</html>
