@@ -1,0 +1,56 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#head1").click(function() {
+                console.log("head1 click");
+            });
+            $("#head2").on("click", function() {
+                console.log("head2 click");
+            });
+            
+
+
+            $("#head3").on({
+                click: function() {
+                    console.log("head3 click");
+                }
+            });
+// => .on( 안의 내용을 {}로 객체를 가져올 수 있다 )
+//    .on ({
+//           mouseenter: function() {
+//             
+//
+//              }
+//          
+//        });
+            
+            
+            
+
+
+            $("#head4").on("click", null, "aaa", function(e) {
+                console.log("function");
+                console.log(e.data);
+            });
+
+// => .on( "on이벤트이름", selector:string, data:any, handler )
+
+
+        });
+    </script>
+</head>
+<body>
+    <h1 id="head1">Lorem.</h1>
+    <h1 id="head2">Animi?</h1>
+    <h1 id="head3">Dolore?</h1>
+    <h1 id="head4">Sed.</h1>
+    <h1 id="head5">At.</h1>
+</body>
+</html>
