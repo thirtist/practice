@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+<head>
+<body>
+    <script>
+        var car = {
+            name: "kia",
+            color: "black",
+            description: function(){
+                console.log(this.name + "," + this.color);
+            },
+            description2: function(){
+                console.log(name + "," + color);
+            }
+        }
+        car.description();
+        car.color = "white";
+        car.description();
+        car.description2(); // <-바로 그 오브젝트의 패러미터를 못가져옴(에러남)
+                            
+        //객체내의 프로퍼티에서 벨류가 함수를 가질 때 그 함수내에서 당 객체의 프로퍼티를 호출한다면
+        //앞에 this를 붙여줘야함
+
+    </script>
+</body>
+</html>
